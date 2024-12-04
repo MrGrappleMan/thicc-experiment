@@ -1,23 +1,16 @@
-my_image := "bos"
-my_image_styled := "bOS"
-repo_name := "bos"
-repo_organization := "bsherman"
-rechunker_image := "ghcr.io/hhd-dev/rechunk:v1.0.1"
+my_image := "Fedrox"
+my_image_styled := "FedroX"
+repo_name := "thicc-experiment"
+repo_organization := "MrGrappleMan"
+rechunker_image := "ghcr.io/hhd-dev/rechunk:latest"
 images := '(
-    [bazzite]="bazzite-gnome"
-    [bazzite-deck]="bazzite-deck-gnome"
-    [bluefin]="bluefin"
-    [bluefin-dx]="bluefin-dx"
-    [ucore-minimal]="ucore-minimal"
-    [ucore]="ucore"
-    [ucore-hci]="ucore-hci"
+    [cosmic]="cosmic"
 )'
 flavors := '(
     [main]=main
     [nvidia]=nvidia
 )'
 tags := '(
-    [stable]=stable
     [beta]=beta
     [testing]=testing
 )'
