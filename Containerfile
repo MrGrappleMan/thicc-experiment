@@ -1,14 +1,15 @@
-ARG BASE_IMAGE="bluefin"
-ARG IMAGE="bluefin"
-ARG TAG_VERSION="stable-daily"
+ARG BASE_IMAGE="cosmic"
+ARG IMAGE="cosmic"
+ARG TAG_VERSION="latest"
 
 FROM scratch AS ctx
 COPY / /
 
-FROM ghcr.io/ublue-os/${BASE_IMAGE}:${TAG_VERSION}
+# Latest once COMIC releases ^_^
+FROM ghcr.io/ublue-os/cosmic:41
 
-ARG BASE_IMAGE="bluefin"
-ARG IMAGE="bluefin"
+ARG BASE_IMAGE="cosmic"
+ARG IMAGE="cosmic"
 
 RUN --mount=type=bind,from=ctx,src=/,dst=/ctx \
     mkdir -p /var/lib/alternatives && \
